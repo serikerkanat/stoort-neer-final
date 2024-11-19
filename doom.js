@@ -39,12 +39,15 @@ const channelId = 'UC-COWIm1ZSTTi7zYz71kfsw';
 fetch(`https://www.googleapis.com/youtube/v3/search?key=${youtubeApiKey}&channelId=${channelId}&order=date&part=snippet&type=video`)
     .then(response => response.json())
     .then(data => {
-        console.log(data); // Отладка: выводим весь ответ от API
+        console.log('API Response:', data); // Проверяем ответ от API
         const videos = data.items;
+
+        // Проверяем, есть ли видео
         if (!videos || videos.length === 0) {
-            console.error('No videos found for this channel or an error occurred.');
+            console.error('No videos found or data.items is undefined');
             return;
         }
+
         const videoList = document.getElementById('video-list');
         videos.forEach(video => {
             const videoElement = document.createElement('div');
@@ -60,4 +63,5 @@ fetch(`https://www.googleapis.com/youtube/v3/search?key=${youtubeApiKey}&channel
     .catch(error => {
         console.error('Error fetching YouTube data:', error);
     });
+
 
