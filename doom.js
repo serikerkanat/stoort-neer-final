@@ -33,7 +33,7 @@ document.querySelectorAll('.thumbnail').forEach(thumb => {
 });
 
 
-const youtubeApiKey = 'AIzaSyCUOHLMF-C38Jo03p0sgvi8glK5InfpgLI';  // Замените на ваш API ключ
+const youtubeApiKey = 'AIzaSyC-2-RDOFd_VIx6LSXQ5xGwHRYUDwZ_VFI';  // Замените на ваш API ключ
 const channelId = 'UC-COWIm1ZSTTi7zYz71kfsw';  // Замените на ID вашего канала
 
 fetch(`https://www.googleapis.com/youtube/v3/search?key=${youtubeApiKey}&channelId=${channelId}&order=date&part=snippet&type=video`)
