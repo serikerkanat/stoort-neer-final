@@ -33,7 +33,7 @@ document.querySelectorAll('.thumbnail').forEach(thumb => {
 });
 
 
-const youtubeApiKey = 'AIzaSyCOphDxWw5ddzSH22cKZEdx7rb8wPhRQTM';  
+const youtubeApiKey = 'AIzaSyBQGzrtq93QW816wE98obnmLOpKVOPBW2g';  
 const channelId = 'UC-COWIm1ZSTTi7zYz71kfsw';  
 
 fetch(`https://www.googleapis.com/youtube/v3/search?key=${youtubeApiKey}&channelId=${channelId}&order=date&part=snippet&type=video`)
